@@ -11,7 +11,10 @@ import SwiftUI
 struct cryptocurrency_trackerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack{
+                HomeView()
+                    .navigationBarHidden(true)
+            }
         }
     }
 }
