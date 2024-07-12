@@ -1,0 +1,83 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+*.xcworkspace
+*.xcuserstate
+*.xccheckout
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/xcshareddata/*
+!*.xcodeproj/xcuserdata
+*.moved-aside
+*.xcuserdatad
+*.swp
+*.lock
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+.xcscmblueprint
+
+# Swift Package Manager
+Packages
+*.xcodeproj/*
+!.xcodeproj/project.pbxproj
+!.xcodeproj/xcshareddata/
+!.xcodeproj/xcshareddata/*
+!.xcodeproj/xcuserdata
+# Package.resolved file
+Package.resolved
+# Build artifacts
+.build/
+
+# CocoaPods
+Pods/
+*.podspec
+*.xcworkspace
+
+# Carthage
+Carthage/Build/
+Carthage/Checkouts/
+
+# Accio dependency manager
+Dependencies/
+.accio/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/readme.md
+
+# Code Injection
+.ci/
+
+# App Center
+appcenter-config.json
+
+# Swift Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift PM Tests
+.swiftpm/xcode
+
+# User specific files
+*.rspec
+*.xcscheme
+*.xcuserstate
+*.xcsettings
+*.xcscmblueprint
+
+# IDEs
+.idea/
+
+# Project settings
+*.xcworkspace
+*.xcuserstate
+*.xcscmblueprint
+
+# OS generated files
+.DS_Store
