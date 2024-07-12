@@ -19,26 +19,7 @@ struct HomeView: View {
             
             //content layer
             VStack {
-                HStack{
-                    CircleButtonView(
-                        iconName: withAnimation(.none, {
-                            showPortfolio ? "plus" : "info"
-                    }))                        .background(CircleButtonAnimationView(animate: $showPortfolio))
-                    Spacer()
-                    Text("Hello, world!")
-                        .font(.headline)
-                        .fontWeight(.heavy)
-                        .foregroundStyle(Color.theme.accent)
-                    Spacer()
-                    CircleButtonView(iconName: "chevron.right")
-                        .rotationEffect(.degrees(showPortfolio ? 180 : 0))
-                        .onTapGesture {
-                            withAnimation(.spring) {
-                                showPortfolio.toggle()
-                            }
-                        }
-                }
-                .padding(.horizontal)
+                homeHeader
                 Spacer(minLength: 0)
             }
             .padding()
@@ -50,5 +31,30 @@ struct HomeView: View {
     NavigationStack{
         HomeView()
             .navigationBarHidden(true)
+    }
+}
+
+extension HomeView {
+    private var homeHeader: some View {
+        HStack{
+            CircleButtonView(
+                iconName: withAnimation(.none, {
+                    showPortfolio ? "plus" : "info"
+                }))                        .background(CircleButtonAnimationView(animate: $showPortfolio))
+            Spacer()
+            Text("Hello, world!")
+                .font(.headline)
+                .fontWeight(.heavy)
+                .foregroundStyle(Color.theme.accent)
+            Spacer()
+            CircleButtonView(iconName: "chevron.right")
+                .rotationEffect(.degrees(showPortfolio ? 180 : 0))
+                .onTapGesture {
+                    withAnimation(.spring) {
+                        showPortfolio.toggle()
+                    }
+                }
+        }
+        .padding(.horizontal)
     }
 }

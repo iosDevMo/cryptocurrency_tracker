@@ -14,7 +14,9 @@ struct CircleButtonAnimationView: View {
     var body: some View {
         Circle()
             .stroke(lineWidth: 5.0)
-            .scale(animate ? 1.0 : 0.0)
+            .scale( withAnimation(animate ? .easeOut(duration: 1.0) : .none, {
+                animate ? 1.0 : 0.0
+            }))
             .opacity(
                 withAnimation(animate ? .easeOut(duration: 1.0) : .none, {
                     animate ? 0.0 : 1.0
@@ -23,5 +25,5 @@ struct CircleButtonAnimationView: View {
 }
 
 #Preview {
-    CircleButtonAnimationView(animate: .constant(true))
+    CircleButtonAnimationView(animate: .constant(false))
 }
