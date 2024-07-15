@@ -27,7 +27,7 @@ struct CoinRowView: View {
             Spacer()
             if showHoldingsColumn {
                 VStack(alignment: .trailing) {
-                    Text(coin.currentHoldingsValue.asCurrencyWith6Decimals())
+                    Text(coin.currentHoldingsValue.asCurrencyWith2Decimals())
                         .bold()
                     Text((coin.currentHoldings ?? 0).asNumberString())
                 }
